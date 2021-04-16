@@ -1,0 +1,188 @@
+body {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#app {
+	overflow: hidden;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.sf-dump {
+	background-color: transparent !important;
+}
+
+.sf-dump:focus {
+	outline: none;
+}
+
+
+.app__items {
+	padding-top: 20px;
+	padding-bottom: 100%;
+	overflow-y: scroll;
+	flex: 1;
+}
+
+
+.external-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+.external-link:after {
+	font-size: 14px;
+	content: "↗️";
+	border: 1px solid rgb(220, 220, 220);
+	margin-left: 3px;
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+	text-align: center;
+	display: inline-block;
+}
+
+
+.context-header {
+	display: flex;
+	flex-direction: column;
+}
+
+.context-header__request {
+	display: flex;
+	align-items: center;
+}
+
+.context-header__request__method {
+	background: rgb(50, 50, 50);
+	font-size: 14px;
+	font-weight: bold;
+	padding: 2px 6px;
+	border-radius: 3px;
+	border: 1px solid rgb(230, 230, 40);
+}
+
+.context-header__request__uri {
+	font-size: 13px;
+	padding-left: 10px;
+}
+
+.context-header__source {
+	margin-top: 5px;
+	display: flex;
+	align-items: center;
+}
+
+
+.service-message-item>div {
+	padding: 5px 0 5px 10px;
+}
+
+.message-item>div {
+	padding: 5px 0 5px 10px;
+}
+
+
+.app__items__item-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+
+.app__items__item-wrapper:not(:last-child) {
+	border-bottom: 1px solid rgb(130, 130, 130);
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.app__items__item-wrapper__delete-button {
+	position: absolute;
+	right: 0;
+	top: -10px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 15px;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 100000;
+
+	transition: opacity .1s, background-color .1s;
+	opacity: 0;
+	background-color: rgba(50, 50, 50, 0);
+}
+
+.app__items__item-wrapper:hover .app__items__item-wrapper__delete-button {
+	opacity: 1;
+}
+
+.app__items__item-wrapper__delete-button:hover {
+	background-color: rgba(50, 50, 50, .75);
+}
+
+.app__items__item-wrapper__delete-button:active {
+	background-color: rgba(50, 50, 50, 1);
+}
+
+
+.app__items__item-scope {
+	padding-right: 10px;
+	border-left: 4px solid;
+}
+
+.app__items__item-scope-default {
+	border-color: rgb(130, 130, 130);
+}
+
+.app__items__item-scope-service {
+	border-color: rgb(40, 40, 230);
+}
+
+.app__items__item-scope-dump {
+	border-color: rgb(40, 230, 40);
+}
+
+.app__items__item-scope-exception {
+	border-color: rgb(230, 40, 40);
+}
+
+
+.app__items-empty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 26px;
+	color: rgb(50, 50, 50);
+	height: 100%;
+}
+
+
+.app__header {
+	background-color: rgb(50, 50, 50);
+	padding: 10px;
+	z-index: 100001;
+	display: flex;
+	align-items: center;
+}
+
+.app__header__status-text .value {
+	font-weight: bold;
+}
+
+.app__header__filler {
+	flex: 1;
+}
+
+.app__header__button {
+	width: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
