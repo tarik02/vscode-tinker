@@ -154,13 +154,19 @@ export async function runCurrentTinkerDocument(): Promise<void> {
 		return
 	}
 
-	runTinkerDocument(editor.document)
+	let code
+
+	if (editor.selections.length === 1 && ! editor.selection.isEmpty) {
+		code = editor.document.getText(editor.selection)
+	} else {
+		code = editor.document.getText()
+	}
+
+	runTinkerDocument(editor.document, code)
 }
 
-export async function runTinkerDocument(document: vscode.TextDocument): Promise<void> {
+export async function runTinkerDocument(document: vscode.TextDocument, input: string): Promise<void> {
 	try {
-		const input = document.getText()
-
 		const workspaceFolder = vscode.workspace.getWorkspaceFolder(document.uri)
 		if (!workspaceFolder) {
 			vscode.window.showErrorMessage('You don\'t have any workspace open')

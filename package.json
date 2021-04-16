@@ -27,7 +27,7 @@
 		"commands": [
 			{
 				"command": "vscode-tinker.tinker.run",
-				"title": "Tinker: Run file"
+				"title": "Tinker: Run"
 			},
 			{
 				"command": "vscode-tinker.dump-server.start",
