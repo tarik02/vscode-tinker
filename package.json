@@ -3,7 +3,7 @@
 	"displayName": "tinker",
 	"description": "Laravel Tinker and Laravel dump server integration for vscode",
 	"publisher": "tarik02",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Tarik02/vscode-tinker"
